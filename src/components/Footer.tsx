@@ -15,7 +15,7 @@ const Footer = () => {
             <span>1950 - 2016</span>
           </div>
           
-          <div className="text-mocha-500 font-sans text-sm">
+          <div className="text-mocha-500 text-sm">
             © 2025 All rights reserved
           </div>
         </div>

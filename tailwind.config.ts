@@ -91,7 +91,7 @@ export default {
 			fontFamily: {
 				'deco': ['Playfair Display', 'serif'],
 				'nouveau': ['Cormorant Garamond', 'serif'],
-				'sans': ['Inter', 'sans-serif']
+				'sans': ['Cormorant Garamond', 'serif']
 			},
 			keyframes: {
 				'accordion-down': {
