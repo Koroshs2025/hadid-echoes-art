@@ -89,9 +89,10 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				'deco': ['Playfair Display', 'serif'],
-				'nouveau': ['Cormorant Garamond', 'serif'],
-				'sans': ['Cormorant Garamond', 'serif']
+				'maison': ['Space Grotesk', 'sans-serif'], // Modern geometric font as Maison Neue alternative
+				'editorial': ['Work Sans', 'sans-serif'], // Light weight modern font as Editorial New alternative  
+				'suisse': ['Inter', 'sans-serif'], // Thin modern font as Suisse Int'l alternative
+				'sans': ['Inter', 'sans-serif'] // Default modern sans-serif
 			},
 			keyframes: {
 				'accordion-down': {
