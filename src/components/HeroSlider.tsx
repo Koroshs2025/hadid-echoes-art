@@ -9,24 +9,24 @@ const HeroSlider = () => {
     {
       image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1920&h=1080&fit=crop',
       title: 'Fluid Architecture',
-      subtitle: 'Redefining the boundaries of space'
+      subtitle: 'Redefining spatial boundaries through parametric design'
     },
     {
       image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=1920&h=1080&fit=crop',
       title: 'Parametric Design',
-      subtitle: 'Where mathematics meets beauty'
+      subtitle: 'Where computational mathematics meets architectural beauty'
     },
     {
       image: 'https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=1920&h=1080&fit=crop',
       title: 'Visionary Structures',
-      subtitle: 'Buildings that defy convention'
+      subtitle: 'Buildings that challenge conventional architectural thinking'
     }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(timer);
   }, [slides.length]);
@@ -40,66 +40,70 @@ const HeroSlider = () => {
   };
 
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative h-screen overflow-hidden bg-mocha-50">
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
+          className={`absolute inset-0 transition-opacity duration-1500 ${
             index === currentSlide ? 'opacity-100' : 'opacity-0'
           }`}
         >
           <img
             src={slide.image}
             alt={slide.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover grayscale-[20%]"
           />
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/30" />
         </div>
       ))}
 
-      {/* Geometric overlay elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 border-4 border-mocha-400 rotate-45 animate-geometric-float opacity-70" />
-      <div className="absolute bottom-32 right-16 w-24 h-24 bg-mocha-500/80 clip-path-triangle animate-geometric-float" style={{ animationDelay: '2s' }} />
-      <div className="absolute top-1/3 right-1/4 w-40 h-2 bg-gradient-to-r from-mocha-400 to-copper" />
-
-      {/* Content */}
-      <div className="absolute inset-0 flex items-center justify-center text-center">
-        <div className="max-w-4xl px-6 animate-fade-in">
-          <h1 className="font-deco text-6xl md:text-8xl font-bold text-white mb-6 tracking-wide">
-            {slides[currentSlide].title}
-          </h1>
-          <p className="font-nouveau text-xl md:text-2xl text-mocha-100 mb-8">
-            {slides[currentSlide].subtitle}
-          </p>
-          <div className="w-24 h-1 bg-mocha-400 mx-auto" />
+      {/* Minimalist content */}
+      <div className="absolute inset-0 flex items-center justify-start">
+        <div className="max-w-4xl px-12 ml-0 lg:ml-16">
+          <div className="space-y-8">
+            <div className="w-24 h-px bg-white mb-8" />
+            <h1 className="font-maison text-5xl lg:text-7xl font-light text-white leading-tight tracking-wide">
+              {slides[currentSlide].title}
+            </h1>
+            <p className="font-editorial text-lg lg:text-xl text-white/90 max-w-2xl font-light leading-relaxed">
+              {slides[currentSlide].subtitle}
+            </p>
+          </div>
         </div>
       </div>
 
-      {/* Navigation */}
+      {/* Minimal navigation */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 text-white hover:text-mocha-300 transition-colors bg-black/20 hover:bg-black/40 rounded-full p-3"
+        className="absolute left-8 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white transition-colors duration-300"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={20} strokeWidth={1} />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 text-white hover:text-mocha-300 transition-colors bg-black/20 hover:bg-black/40 rounded-full p-3"
+        className="absolute right-8 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white transition-colors duration-300"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={20} strokeWidth={1} />
       </button>
 
-      {/* Slide indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      {/* Minimal slide indicators */}
+      <div className="absolute bottom-12 left-12 flex space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentSlide ? 'bg-mocha-400' : 'bg-white/50'
+            className={`w-8 h-px transition-all duration-300 ${
+              index === currentSlide ? 'bg-white' : 'bg-white/40'
             }`}
           />
         ))}
+      </div>
+
+      {/* Slide counter */}
+      <div className="absolute bottom-12 right-12 text-white/80 font-editorial text-sm tracking-wider">
+        <span className="font-light">{String(currentSlide + 1).padStart(2, '0')}</span>
+        <span className="mx-2 text-white/40">/</span>
+        <span className="font-light text-white/60">{String(slides.length).padStart(2, '0')}</span>
       </div>
     </div>
   );

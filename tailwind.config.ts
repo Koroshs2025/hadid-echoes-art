@@ -63,24 +63,25 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// 2025 Color of the Year - Mocha Mousse palette
+				// Refined neutral palette inspired by architectural websites
 				mocha: {
-					50: '#faf8f4',
-					100: '#f4f0e8',
-					200: '#e8ddd0',
-					300: '#d7c5b0',
-					400: '#c4a488',
-					500: '#b5906c',
-					600: '#a67d5f',
-					700: '#8a6650',
-					800: '#715344',
-					900: '#5c4439',
-					950: '#31231c'
+					25: '#fdfcfa',
+					50: '#fbf9f5',
+					100: '#f6f2ec',
+					200: '#ede5d8',
+					300: '#ddd0bb',
+					400: '#c7b299',
+					500: '#b5977a',
+					600: '#a67f63',
+					700: '#8a6a52',
+					800: '#725746',
+					900: '#5d473b',
+					950: '#31251d'
 				},
-				// Complementary warm tones
-				cream: '#fdfbf7',
-				bronze: '#cd7f32',
-				gold: '#ffd700',
+				// Accent colors
+				cream: '#fdfcfa',
+				bronze: '#b87333',
+				gold: '#d4af37',
 				copper: '#b87333'
 			},
 			borderRadius: {
@@ -89,10 +90,15 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				'maison': ['Space Grotesk', 'sans-serif'], // Modern geometric font as Maison Neue alternative
-				'editorial': ['Work Sans', 'sans-serif'], // Light weight modern font as Editorial New alternative  
-				'suisse': ['Inter', 'sans-serif'], // Thin modern font as Suisse Int'l alternative
-				'sans': ['Inter', 'sans-serif'] // Default modern sans-serif
+				'maison': ['Space Grotesk', 'sans-serif'], // Modern geometric as Maison Neue alternative
+				'editorial': ['Work Sans', 'sans-serif'], // Clean modern as Editorial New alternative  
+				'suisse': ['Inter', 'sans-serif'], // Minimal modern as Suisse Int'l alternative
+				'sans': ['Inter', 'sans-serif'] // Default
+			},
+			letterSpacing: {
+				'wide': '0.1em',
+				'wider': '0.15em',
+				'widest': '0.2em'
 			},
 			keyframes: {
 				'accordion-down': {
