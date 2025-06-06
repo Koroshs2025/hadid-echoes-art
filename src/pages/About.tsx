@@ -22,7 +22,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Biography Section */}
+      {/* Biography Section with Portrait */}
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -56,9 +56,9 @@ const About = () => {
 
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=800&fit=crop"
-                alt="Architectural inspiration"
-                className="w-full h-96 object-cover rounded-lg shadow-2xl"
+                src="/lovable-uploads/b9e7e3c8-33d5-423d-b72d-e3cb292487cc.png"
+                alt="Zaha Hadid Portrait"
+                className="w-full h-96 object-cover rounded-lg shadow-2xl grayscale"
               />
               <div className="absolute -top-6 -left-6 w-20 h-20 border-4 border-mocha-400 rotate-45 animate-geometric-float" />
               <div className="absolute -bottom-6 -right-6 w-16 h-16 bg-copper/80 clip-path-triangle" />

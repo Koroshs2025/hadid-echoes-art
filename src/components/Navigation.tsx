@@ -16,8 +16,12 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/98 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-12 py-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="font-maison text-2xl font-light text-mocha-900 hover:text-mocha-700 transition-colors duration-300 tracking-[0.2em]">
-            ZAHA HADID
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/64e48d7e-1ef8-4ccc-a677-4d6d5343b3a3.png" 
+              alt="Zaha Hadid" 
+              className="h-8 w-auto"
+            />
           </Link>
           
           <div className="hidden md:flex items-center space-x-16">
