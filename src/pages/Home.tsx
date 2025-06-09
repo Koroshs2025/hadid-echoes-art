@@ -1,7 +1,7 @@
-
 import React from 'react';
 import HeroSlider from '../components/HeroSlider';
 import GeometricBackground from '../components/GeometricBackground';
+import ContactUs from '../components/ContactUs';
 
 const Home = () => {
   return (
@@ -187,6 +187,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Contact Us Section */}
+      <ContactUs variant="compact" />
 
       {/* Quote Section */}
       <section className="py-32 px-12 lg:px-24 relative">

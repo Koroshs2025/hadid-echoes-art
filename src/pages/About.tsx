@@ -1,6 +1,6 @@
-
 import React from 'react';
 import GeometricElements from '../components/GeometricElements';
+import ContactUs from '../components/ContactUs';
 
 const About = () => {
   return (
@@ -136,6 +136,9 @@ const About = () => {
           </p>
         </div>
       </section>
+
+      {/* Contact Us Section */}
+      <ContactUs variant="full" />
     </div>
   );
 };
